@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sudoku.js - JavaScript Sudoku Solver</title>
+	<link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<script src="sudoku.helper.js"></script>
+	<script src="sudoku.js"></script>
+	<script src="sudoku.ui.js"></script>
+</head>
+<body>	
+	<form name="sudoku">
+	    <h1>Sudoku.js</h1>
+	    <div id="grid">
+    		<div class="r1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r2">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r3">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    	    <div class="r1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r2">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r3">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r1 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r2 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r3 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r4">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r5">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r6">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r4">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r5">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r6">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r4 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r5 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r6 last">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r7">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r8">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r9">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r7">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r8">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r9">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		
+    		<div class="r7">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r8">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+    		<div class="r9 clearfix">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    			<input type="text" maxlength="1">
+    		</div>
+		</div>
+		
+		<div id="instructions">
+		    Invalid values will be highlighted in red. To get an explanation of an error, hover over the field in question, or double-click
+		    the field.
+		</div>
+		
+		<div id="buttons">
+		    <button id="btnOpenLoadWindow">Paste Puzzle</button>
+		    <button id="btnSolvePuzzle">Solve Puzzle</button>
+		    <button id="btnHint">Hint</button>
+		</div>
+		
+		<div id="winLoad">
+		    <div id="winLoadFields">
+    		    <label for="txtPuzzle">Paste a Puzzle:</label>
+    		    <textarea name="txtPuzzle" id="txtPuzzle"></textarea>
+		    </div>
+		    <div id="winLoadActions">
+				<div id="winLoadActionsSamples">
+			        <button id="btnCompletePuzzleSample">Complete Puzzle</button>
+			        <button id="btnIncorrectPuzzleSample">Incorrect Puzzle</button>
+			        <button id="btnIncompletePuzzleSample">Incomplete Puzzle</button>
+		        </div>
+    		    <button id="btnStartLoad">Load</button>
+    		    <button id="btnCancelLoad">Cancel</button>
+    		</div>
+		</div>
+	</form>
+</body>
+</html>
